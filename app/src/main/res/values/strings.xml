@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Siri Dhanya Hub</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_mandi">Mandi</string>
+    <string name="nav_recipes">Recipes</string>
+    <string name="nav_health">Health</string>
+    <string name="nav_buy">Buy Direct</string>
+    <string name="nav_favorites">Saved</string>
+    <string name="millet_hub">ಮಿಲೆಟ್ ಮಾರ್ಕೆಟ್</string>
+    <string name="tagline">Karnataka\'s Millet Value Chain App</string>
+    <string name="search_recipes">Search recipes…</string>
+    <string name="no_favorites">No saved recipes yet.\nTap ❤️ on any recipe to save it.</string>
+    <string name="call">📞 Call FPO</string>
+    <string name="refresh">Refresh Prices</string>
+
+    <!-- Auth -->
+    <string name="auth_secure_access">Secure Access</string>
+    <string name="auth_welcome_back">Welcome Back</string>
+    <string name="auth_setup_pin">Set up PIN</string>
+    <string name="auth_confirm_pin">Confirm PIN</string>
+    <string name="auth_enter_pin">Enter your 4-digit PIN</string>
+    <string name="auth_create_pin_subtitle">Create a 4-digit PIN for security</string>
+    <string name="auth_pin_mismatch">PINs don\'t match. Try again.</string>
+    <string name="auth_incorrect_pin">Incorrect PIN</string>
+    <string name="auth_lockout_message">Locked out. Try again in %d s</string>
+    <string name="auth_biometric_title">Biometric Login</string>
+    <string name="auth_biometric_subtitle">Log in using your biometric credential</string>
+    <string name="auth_biometric_negative">Use PIN</string>
+</resources>

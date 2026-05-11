@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_green" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🍱 Recipe Lab" android:textColor="#FFFFFF"
+            android:textSize="22sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ಕನ್ನಡ ಮಿಲೆಟ್ ರೆಸಿಪಿಗಳು • Kannada Millet Recipes"
+            android:textColor="#CCE8F5E9" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_margin="12dp" style="@style/Widget.SiriDhanya.TextInput"
+        android:hint="Search recipes by name or millet…"
+        app:startIconDrawable="@android:drawable/ic_menu_search">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="text"
+            android:imeOptions="actionSearch"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Millet Filter Chips -->
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:scrollbars="none" android:paddingHorizontal="12dp" android:paddingBottom="8dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.chip.Chip android:id="@+id/chip_all"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="All" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/primary" android:textColor="#FFFFFF"
+                android:checked="true"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_navane"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌾 Navane" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_sajje"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌿 Sajje" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_ragi"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌱 Ragi" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_jowar"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌽 Jowar"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView android:id="@+id/tv_count" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="0 recipes"
+        android:textColor="@color/text_hint" android:textSize="12sp"
+        android:paddingHorizontal="16dp" android:paddingBottom="4dp"/>
+
+    <TextView android:id="@+id/tv_empty" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="No recipes found.\nTry a different search."
+        android:textColor="@color/text_hint" android:textSize="15sp"
+        android:gravity="center" android:padding="40dp" android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_recipes"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingHorizontal="8dp" android:paddingBottom="80dp" android:clipToPadding="false"/>
+</LinearLayout>

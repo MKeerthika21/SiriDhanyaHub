@@ -1,0 +1,6 @@
+-keep class com.siridhanya.hub.data.entities.** { *; }
+-keep class dagger.hilt.** { *; }
+-keep @dagger.hilt.android.HiltAndroidApp class * { *; }
+-keep @dagger.hilt.android.AndroidEntryPoint class * { *; }
+-keep class * implements android.os.Parcelable { *; }
+-keepclassmembers enum * { public static **[] values(); public static ** valueOf(java.lang.String); }

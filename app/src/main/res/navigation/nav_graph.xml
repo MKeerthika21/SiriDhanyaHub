@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.siridhanya.hub.ui.home.HomeFragment"
+        android:label="Home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_home_to_mandi"    app:destination="@id/mandiFragment"/>
+        <action android:id="@+id/action_home_to_recipes"  app:destination="@id/recipesFragment"/>
+        <action android:id="@+id/action_home_to_health"   app:destination="@id/healthFragment"/>
+        <action android:id="@+id/action_home_to_buy"      app:destination="@id/buyFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/mandiFragment"
+        android:name="com.siridhanya.hub.ui.mandi.MandiFragment"
+        android:label="Mandi Watch" tools:layout="@layout/fragment_mandi"/>
+
+    <fragment android:id="@+id/recipesFragment"
+        android:name="com.siridhanya.hub.ui.recipes.RecipesFragment"
+        android:label="Recipe Lab" tools:layout="@layout/fragment_recipes">
+        <action android:id="@+id/action_recipes_to_recipeDetail" app:destination="@id/recipeDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/recipeDetailFragment"
+        android:name="com.siridhanya.hub.ui.recipes.RecipeDetailFragment"
+        android:label="Recipe Detail" tools:layout="@layout/fragment_recipe_detail">
+        <argument android:name="recipe" app:argType="com.siridhanya.hub.data.entities.Recipe"/>
+    </fragment>
+
+    <fragment android:id="@+id/healthFragment"
+        android:name="com.siridhanya.hub.ui.health.HealthFragment"
+        android:label="Health Benefits" tools:layout="@layout/fragment_health"/>
+
+    <fragment android:id="@+id/buyFragment"
+        android:name="com.siridhanya.hub.ui.buy.BuyFragment"
+        android:label="Buy Direct" tools:layout="@layout/fragment_buy"/>
+
+    <fragment android:id="@+id/favoritesFragment"
+        android:name="com.siridhanya.hub.ui.favorites.FavoritesFragment"
+        android:label="Saved Recipes" tools:layout="@layout/fragment_favorites">
+        <action android:id="@+id/action_favorites_to_recipeDetail" app:destination="@id/recipeDetailFragment"/>
+    </fragment>
+
+</navigation>

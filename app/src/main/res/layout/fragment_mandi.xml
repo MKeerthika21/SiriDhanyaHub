@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_amber" android:orientation="vertical"
+        android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📈 Mandi Watch" android:textColor="#FFFFFF"
+            android:textSize="22sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Live simulated millet prices across Karnataka APMCs"
+            android:textColor="#CCE8F5E9" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="City:" android:textColor="@color/text_secondary"
+            android:textSize="14sp" android:layout_marginEnd="8dp"/>
+        <Spinner android:id="@+id/spinner_city" android:layout_width="0dp"
+            android:layout_height="48dp" android:layout_weight="1"
+            android:background="@drawable/bg_card_earthy" android:padding="8dp"/>
+        <TextView android:id="@+id/tv_price_count" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="0 prices"
+            android:textColor="@color/text_hint" android:textSize="12sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mandi"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:paddingHorizontal="12dp" android:paddingBottom="80dp"
+            android:clipToPadding="false"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_terracotta" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="💚 Health Benefits" android:textColor="#FFFFFF"
+            android:textSize="22sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Science-backed nutrition facts • ಆರೋಗ್ಯ ಮಾಹಿತಿ"
+            android:textColor="#CCFFFFFF" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Millet Filter Chips -->
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:scrollbars="none" android:padding="12dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.chip.Chip android:id="@+id/chip_all_h"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="All" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/primary" android:textColor="#FFFFFF"
+                android:checked="true"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_navane_h"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌾 Navane" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_ragi_h"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌱 Ragi" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_sajje_h"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌿 Sajje" android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_jowar_h"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="🌽 Jowar"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_health"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingHorizontal="12dp" android:paddingBottom="80dp" android:clipToPadding="false"/>
+</LinearLayout>
